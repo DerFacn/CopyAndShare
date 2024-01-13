@@ -8,4 +8,4 @@ class Post(Base):
     __tablename__ = "post"
     id: Mapped[int] = mapped_column(primary_key=True)
     text: Mapped[str]
-    code: Mapped[str] = mapped_column(String(6))
+    code: Mapped[str] = mapped_column(String(10), unique=True)
