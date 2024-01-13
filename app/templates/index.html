@@ -16,7 +16,7 @@
         <div class="header">
             <div class="logo">
                 <h1>CopyAndShare</h1>
-                Here you can simply copy and share your code!
+                <span>Here you can simply copy and share your code!</span>
             </div>
             <button type="submit" form="textForm">Share!</button>
         </div>
@@ -29,7 +29,6 @@
                 <textarea name="textarea" id="editor" oninput="changeLines()" placeholder="Start writing here!" spellcheck="false"></textarea>
             </form>
         </div>
-
     </div>
 </body>
 <script src="{{ url_for('static', filename='script.js') }}"></script>
