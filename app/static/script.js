@@ -37,3 +37,8 @@ changeSpacingButton.addEventListener("click", function(){
         changeSpacingButton.innerHTML = "Tabs"
     }
 })
+
+function copyText() {
+    navigator.clipboard.writeText(editor.value)
+    alert('Text successfully copied!')
+}

@@ -23,9 +23,10 @@ def create():
     return redirect(url_for('main.share', code=code))
 
 
-@main.route('/<code>')
+@main.route('/code/<code>')
 def share(code):
     post = session.query(Post).filter_by(code=code).first()
     if not post:
         '<h1 style="color: red">Post not founded!</h1>'
-    return render_template('share.html', text=post.text)
+    url = url_for('main.share', code=code)
+    return render_template('share.html', text=post.text, url=url)

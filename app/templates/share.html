@@ -18,10 +18,16 @@
                 <h1>CopyAndShare</h1>
                 <span>Here you can simply copy and share your code!</span>
             </div>
+            <div class="url">
+                <button onclick="copyText()">Copy all!</button>
+                <a href="{{ url }}">{{ url }}</a>
+            </div>
         </div>
         <div class="code-editor">
             <div id="numberLine"><div>1</div></div>
-            <textarea id="editor" spellcheck="false">{{ text }}</textarea>
+            <form>
+                <textarea id="editor" spellcheck="false">{{ text }}</textarea>
+            </form>
         </div>
     </div>
 </body>
